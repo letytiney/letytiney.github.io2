@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de jubilación</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <h1>Calculo de Jubilacion IGSS</h1>
+    <form action="" method="POST" id="formJubilacion">
+        <h3>Datos del afiliado</h3>
+        <label for="">Nombres</label>
+        <input type="text" id="nombres" required>
+        <br>
+        <label for="">Apellidos</label>
+        <input type="text" id="apellidos" required>
+        <br>
+        <label for="">No. de Afiliacion</label>
+        <input type="number" id="noAfiliacion" required>
+        <br>
+        <label for="">No. de Indentificacioin CUI</label>
+        <input type="number" id="dpi"required >
+        <br>
+        <label for="">Nit</label>
+        <input type="text" id="nit" required>
+        <br>
+        <label for="">Fecha de nacimiento</label> <!--Min 60 anios-->
+        <input type="date" id="fNacimientos" required >
+        <br>
+        <label for="">Fecha de afiliación</label> <!--debe ser anterior al 1 feb 2011, segun articulo 15-->
+        <input type="date" id="fAfiliacion" required>
+        <br>
+        <label for="">Salario Promedio en los ultimos 5 años</label> 
+        <input type="number" id="SalarioPromedio" required>
+        <br>
+        <label for="">Contribuciones realizadas</label>
+        <select  id="contribuciones">
+            <option value="nulo" disabled selected>Seleccionar opcion</option>
+            <option value="180">180 contribuciones</option>
+            <option value="192">192 contribuciones</option>
+            <option value="204">204 contribuciones</option> 
+            <option value="216">216 contribuciones</option>
+            <option value="228">228 contribuciones</option>
+            <option value="240">240 contribuciones</option>
+        </select>
+       <button type="submit" id="submitButton">Procesar Datos</button> 
+    </form>
+   
+    <button type="submit" onclick="mostrarDatos()">Mostrar Calculo</button>
+    <div id="resultado"></div>
+<script src="./js/validaciones.js"></script>   
+</body>
+</html>
